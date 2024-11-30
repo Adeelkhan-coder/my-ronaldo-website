@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristiano Ronaldo - A Football Legend</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #6e7dff, #ff9a8b);
+            color: #fff;
+            overflow-x: hidden;
+        }
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            text-align: center;
+            padding: 50px 0;
+            border-bottom: 5px solid #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        header h1 {
+            font-size: 3em;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.5em;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 1.2em;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            background-color: #444;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            background-color: #ff9a8b;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .container {
+            width: 85%;
+            margin: 50px auto;
+        }
+
+        /* Section Styles */
+        .section {
+            background-color: #ffffff;
+            color: #333;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 40px;
+            transition: all 0.3s ease-in-out;
+        }
+        .section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .section h2 {
+            font-size: 2em;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 20px;
+            color: #333;
+            position: relative;
+        }
+        .section h2::before {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 5px;
+            background-color: #ff9a8b;
+            left: 0;
+            bottom: -10px;
+        }
+
+        p, ul {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #555;
+            background: #f1f1f1;
+            padding: 20px;
+            border-left: 5px solid #ff9a8b;
+            margin-top: 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .quote:hover {
+            background-color: #ff9a8b;
+            color: #fff;
+            transform: scale(1.03);
+        }
+
+        .timeline {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .timeline-item {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .timeline-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        .timeline-item .year {
+            font-size: 1.5em;
+            color: #ff9a8b;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .timeline-item .details {
+            font-size: 1.1em;
+        }
+
+        .faq-item h3 {
+            cursor: pointer;
+            background-color: #ff9a8b;
+            color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+        .faq-item h3:hover {
+            background-color: #e76e63;
+        }
+        .faq-item p {
+            display: none;
+            padding: 15px;
+            background-color: #f1f1f1;
+            margin-top: 5px;
+            border-radius: 5px;
+            color: #333;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cristiano Ronaldo</h1>
+        <p>The Journey of a Football Icon</p>
+        <nav>
+            <a href="#history">History</a>
+            <a href="#statistics">Statistics</a>
+            <a href="#achievements">Trophies</a>
+            <a href="#timeline">Timeline</a>
+            <a href="#quotes">Quotes</a>
+            <a href="#questions">FAQ</a>
+        </nav>
+    </header>
+    <div class="container">
+        <!-- History Section -->
+        <div id="history" class="section fade-in">
+            <h2>History</h2>
+            <p>Cristiano Ronaldo, born in Funchal, Madeira, Portugal, is a global icon of football. His journey began with the local team, Andorinha, before moving to Nacional and later to Sporting CP, where his skills began to shine.</p>
+            <p>His breakthrough came in 2003, when Sir Alex Ferguson, impressed by Ronaldo’s performance against Manchester United, signed him. This marked the start of an illustrious journey at Manchester United, followed by Real Madrid, Juventus, and a return to Manchester United.</p>
+        </div>
+
+        <!-- Statistics Section -->
+        <div id="statistics" class="section fade-in">
+            <h2>Statistics</h2>
+            <p>Cristiano Ronaldo has played in over 1,150 matches across club and international competitions, scoring more than 850 goals and providing over 250 assists. His incredible consistency has led to an average of 0.74 goals per match throughout his career.</p>
+            <p>His international career with Portugal has seen him play over 200 times, making him one of the most capped players in history, with over 125 goals to his name—holding the record for the most international goals by a European player.</p>
+        </div>
+
+        <!-- Achievements Section -->
+        <div id="achievements" class="section fade-in">
+            <h2>Trophies & Awards</h2>
+            <h3>Club Trophies</h3>
+            <ul>
+                <li><strong>UEFA Champions League:</strong> 5 Titles (2008, 2014, 2016, 2017, 2018)</li>
+                <li><strong>Ballon d'Or:</strong> 5 Wins (2008, 2013, 2014, 2016, 2017)</li>
+            </ul>
+
+            <h3>Individual Achievements</h3>
+            <ul>
+                <li><strong>FIFA Player of the Year:</strong> 2 Times (2008, 2016)</li>
+                <li><strong>European Golden Shoe:</strong> 4 Times (2008, 2014, 2015, 2018)</li>
+            </ul>
+        </div>
+
+        <!-- Timeline Section -->
+        <div id="timeline" class="section fade-in">
+            <h2>Career Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="year">2003</div>
+                    <div class="details">Cristiano Ronaldo signs with Manchester United, making his Premier League debut at 18.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="year">2009</div>
+                    <div class="details">Ronaldo transfers to Real Madrid for a then-record fee, beginning a new era in his career.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quotes Section -->
+        <div id="quotes" class="section fade-in">
+            <h2>Quotes by Cristiano Ronaldo</h2>
+            <p class="quote">"I don’t have to show anything to anyone. There is nothing to prove." – Cristiano Ronaldo</p>
+            <p class="quote">"I am not a perfectionist, but I like to feel that things are perfect." – Cristiano Ronaldo</p>
+            <p class="quote">"I want to be remembered as one of the best." – Cristiano Ronaldo</p>
+        </div>
+
+        <!-- Questions Section -->
+        <div id="questions" class="section fade-in">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>How many goals has Cristiano Ronaldo scored in the Champions League?</h3>
+                <p>As of 2024, Ronaldo has scored over 140 goals in the UEFA Champions League, making him the competition's all-time top scorer.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What is Cristiano Ronaldo's greatest achievement?</h3>
+                <p>Ronaldo's greatest achievement is arguably his ability to succeed across different leagues, winning major titles in the Premier League, La Liga, and Serie A, as well as his leadership role in Portugal's Euro 2016 victory.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Ronaldo Fansite. All rights reserved. | Made with ❤️ by Fans</p>
+    </footer>
+
+    <script>
+        // Toggle FAQ answers
+        document.querySelectorAll('.faq-item h3').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>
